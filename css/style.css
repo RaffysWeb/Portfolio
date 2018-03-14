@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+body,
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 80%;
+  height: 100%;
+  background: #f5f4f4;
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  margin: auto; }
+  @supports (display: grid) {
+    body,
+    html {
+      display: block; } }
+
+.item-description {
+  display: none; }
+
+.section {
+  display: none;
+  padding: 2rem; }
+  @media screen and (min-width: 768px) {
+    .section {
+      padding: 4rem; } }
+  @supports (display: grid) {
+    .section {
+      display: block; } }
+
+h1 {
+  text-align: center;
+  font-size: 4rem;
+  margin: 0.5em 0 0.5em 0; }
+
+.grid {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 150px;
+  grid-auto-flow: row dense; }
+
+a {
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  background: #0c9a9a;
+  color: #fff;
+  grid-column-start: auto;
+  grid-row-start: auto;
+  color: #fff;
+  background: url("../img/MEANapp.png");
+  background-size: cover;
+  background-position: top;
+  box-shadow: -2px 2px 10px 0px rgba(68, 68, 68, 0.4);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer; }
+  a:nth-of-type(2n) {
+    background-image: url("../img/loopLab.png"); }
+  a:nth-of-type(3n) {
+    background-image: url("../img/mizuk.png"); }
+  a:nth-of-type(4n) {
+    background-image: url("../img/commingSoon.png"); }
+  a:nth-of-type(5n) {
+    background-image: url("../img/gitHubFinder.png"); }
+  a:nth-of-type(6n) {
+    background-image: url("../img/loanCalculator.png"); }
+  a:nth-of-type(7n) {
+    background-image: url("../img/taskList.png"); }
+  a:nth-of-type(8n) {
+    background-image: url("../img/bookList.png"); }
+  a:nth-of-type(9n) {
+    background-image: url("../img/guessingGame.png"); }
+  a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; }
+  a:hover {
+    transform: scale(1.05); }
+    a:hover .item-details {
+      display: none; }
+    a:hover .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8); }
+    a:hover .item-description {
+      font-size: 1.2em;
+      font-weight: 600;
+      margin-top: 20px;
+      display: block; }
+
+.item-details {
+  text-align: center;
+  position: bottom;
+  z-index: 1;
+  padding: 5px;
+  color: #444;
+  background: #fff;
+  letter-spacing: 1px;
+  color: #828282; }
+  .item-details:before {
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding-right: 0.5em;
+    color: #444; }
